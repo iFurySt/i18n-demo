@@ -165,7 +165,10 @@ const TablePage = () => {
   ]);
 
   return (
-    <div className="p-10">
+    <div className="flex flex-col p-10 gap-5">
+      <div>
+        Current language: {lang}
+      </div>
       <Button color="primary" onClick={async () => {
         if (lang === 'en') {
           await setUserLocale('zh');
